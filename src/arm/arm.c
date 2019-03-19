@@ -27,6 +27,8 @@
 #include <string.h>
 
 #include "arm/96boards.h"
+#include "arm/apalis.h"
+#include "arm/raspberry_pi.h"
 #include "arm/de_nano_soc.h"
 #include "arm/banana.h"
 #include "arm/beaglebone.h"
@@ -127,6 +129,9 @@ mraa_arm_platform()
             break;
         case MRAA_DE_NANO_SOC:
             plat = mraa_de_nano_soc();
+            break;
+        case MRAA_APALIS:
+            plat = mraa_apalis();
             break;
         default:
             plat = NULL;
